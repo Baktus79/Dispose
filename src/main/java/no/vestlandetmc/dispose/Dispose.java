@@ -6,15 +6,14 @@ public class Dispose extends JavaPlugin {
 
 	public static Dispose instance;
 
-	public static Dispose getInstance() {
+	public static Dispose getPlugin() {
 		return instance;
 	}
 
 	@Override
 	public void onEnable() {
 		instance = this;
-
-		this.getCommand("dispose").setExecutor(new StonadCommand());
+		this.getCommand("dispose").setExecutor(new DisposeCommand());
 	}
 
 }
